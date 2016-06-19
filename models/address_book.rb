@@ -25,5 +25,4 @@ class AddressBook
         end
         @entries.insert(index, Entry.new(name, phone_number, email))
     end
-    
 end
