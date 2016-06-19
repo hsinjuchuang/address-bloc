@@ -15,7 +15,10 @@ class AddressBook
     end
     @entries.delete(delete_entry)
     end
+<<<<<<< HEAD
     
+=======
+>>>>>>> fba2362da395a50b7f8d69ee4040b6903c78931b
     def add_entry(name, phone_number, email)
         index = 0
         @entries.each do |entry|
@@ -26,4 +29,8 @@ class AddressBook
         end
         @entries.insert(index, Entry.new(name, phone_number, email))
     end
+<<<<<<< HEAD
+=======
+    
+>>>>>>> fba2362da395a50b7f8d69ee4040b6903c78931b
 end
