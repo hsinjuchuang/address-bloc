@@ -160,5 +160,5 @@ describe "#iterative_search" do
         expect(entry).to be_a Entry
         check_entry(entry, "Sussie", "555-555-2036", "sussie@blocmail.com")
     end
-end
+    end
 end
