@@ -25,6 +25,16 @@ class AddressBook
             add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
         end
     end
+    def remove_entry(name, phone, email)
+       delete_entry = nil
+       
+       @entries.each do |entry|
+          if name == entry.name && phone == entry.phone_number && email == entry.email
+          delete_entry = entry
+       end
+    end
+       @entries.delete(delete_entry)
+    end
     def iterative_search(name)
         @entries.each do |entry|
             if entry.name == name
