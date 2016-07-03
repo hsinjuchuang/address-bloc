@@ -174,14 +174,13 @@ class MenuController
         puts entry
     end
     def search_submenu(entry)
-        # #12
+
         puts "\nd - delete entry"
         puts "e - edit this entry"
         puts "m - return to main menu"
-        # #13
+
         selection = gets.chomp
         
-        # #14
         case selection
             when "d"
             system "clear"
@@ -201,7 +200,4 @@ class MenuController
             search_submenu(entry)
         end
     end
-    def nuke
-        @entries = []
-    end 
 end

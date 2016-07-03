@@ -138,6 +138,7 @@ RSpec.describe AddressBook do
       expect(entry).to be_a Entry
       check_entry(entry, "Sussie", "555-555-2036", "sussie@blocmail.com")
     end
+<<<<<<< bde035d532510a928bf0497132d2abffffaf7bb2
   end
   describe "#iterative_search" do
     it "searches AddressBook for a non-existent entry" do
@@ -181,6 +182,10 @@ RSpec.describe AddressBook do
   end
 
   describe "#nuke" do
+=======
+end
+describe "#nuke" do
+>>>>>>> Assignment-23-menu-continued:completed
     it "removes all entries" do
       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
