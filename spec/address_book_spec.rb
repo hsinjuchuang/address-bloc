@@ -39,6 +39,23 @@ RSpec.describe AddressBook do
             expect(new_entry.email).to eq('augusta.king@lovelace.com')
         end
     end
+    describe "#remove_entry" do
+       it "removes an entry using the name, phone_number, and email address" do
+          book.add_entry("HsinJu Chuang", "333-333-3333", "blah@gmail.com")
+                         
+          name = "Ada Lovelace"
+          phone_number = "010.012.1815"
+          email_address = "augusta.king@lovelace.com"
+          book.add_entry(name, phone_number, email_address)
+          
+          expect(book.entries.size).to eq 2
+          book.remove_entry(name, phone_number, email_address)
+          expect(book.entries.size).to eq 1
+          expect(book.entries.first.name).to eq("HsinJu Chuang")
+       end
+    end
+
+
     describe "#import_from_csv" do
         it "imports the correct number of entries" do
             book.import_from_csv("entries.csv")
@@ -160,5 +177,5 @@ describe "#iterative_search" do
         expect(entry).to be_a Entry
         check_entry(entry, "Sussie", "555-555-2036", "sussie@blocmail.com")
     end
-end
+    end
 end
